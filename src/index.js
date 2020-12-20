@@ -1,5 +1,3 @@
-import "./styles.css";
-
 var other = require("./calculate");
 
 var mainerbody = document.getElementById("app");
