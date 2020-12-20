@@ -1,5 +1,3 @@
-var other = require("./calculate");
-
 var mainerbody = document.getElementById("app");
 var mainbody = document.createElement("table");
 mainerbody.append(mainbody);
@@ -22,7 +20,7 @@ const Time = {
 };
 
 function f() {
-  other.Calculate(Fields);
+  Calculate(Fields);
 }
 
 class Field {
