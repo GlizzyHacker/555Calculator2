@@ -1,0 +1,27 @@
+#app {
+  font-family: sans-serif;
+  border-style: ridge;
+
+  margin: auto;
+  width: 50%;
+  border-style: groove;
+  padding: 10px;
+}
+label {
+  padding: 10px;
+}
+td {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom-style: groove;
+}
+option {
+}
+select {
+}
+#prefix {
+  text-align: left;
+}
+#cField {
+  border: solid;
+}
