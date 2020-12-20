@@ -156,7 +156,7 @@ class Field {
     }
   }
 }
-export var Fields = [
+var Fields = [
   new Field("Capacitor", "c", false, Capacitor),
   new Field("Resistor 1", "r1", false, Resistor),
   new Field("Resistor 2", "r2", false, Resistor),
