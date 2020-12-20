@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import * as other from "./calculate.js";
+var other = require("./calculate");
 
 var mainerbody = document.getElementById("app");
 var mainbody = document.createElement("table");
