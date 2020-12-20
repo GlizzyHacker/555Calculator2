@@ -6,7 +6,7 @@ function Convert(a) {
   return n;
 }
 
-exports.Calculate = function (Fields) {
+var Calculate = function (Fields) {
   var c = Convert(Fields[0]);
   var r1 = Convert(Fields[1]);
   var r2 = Convert(Fields[2]);
