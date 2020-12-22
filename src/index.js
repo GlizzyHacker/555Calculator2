@@ -1,5 +1,5 @@
 var mainerbody = document.getElementById("app");
-var mainbody = document.createElement("table");
+var mainbody = document.createElement("div");
 mainerbody.append(mainbody);
 
 const Resistor = {
@@ -30,29 +30,23 @@ class Field {
       this.Prefixnames = Prefixset.names;
       this.prefix = this.Prefixs[Prefixset.values[0] / 10];
     }
-    var body = document.createElement("tr");
+    var body = document.createElement("div");
+    body.className = "row";
     body.id = id + "Field";
     this.l = document.createElement("label");
     this.i = document.createElement("input");
     this.d = document.createElement("select");
     this.id = id;
 
-    var newtd = document.createElement("td");
-    newtd.id = "name";
-    newtd.append(this.l);
-    body.append(newtd);
+    this.l.className = "col-4 noborder";
+    body.append(this.l);
 
-    var newtd = document.createElement("td");
-    newtd.id = "value";
-    newtd.append(this.i);
-    body.append(newtd);
+    this.i.className = "col-4 noborder";
+    body.append(this.i);
+    this.d.className = "col-4 noborder";
+    body.append(this.d);
 
     if (this.Prefixnames != null) {
-      var newtd = document.createElement("td");
-      newtd.id = "prefix";
-      newtd.append(this.d);
-      body.append(newtd);
-
       for (var pref in this.Prefixnames) {
         var prefix = this.Prefixnames[pref];
 
@@ -68,13 +62,9 @@ class Field {
 
       this.d.selectedIndex = this.prefix - 1;
     } else {
-      var l2 = document.createElement("label");
-      l2.innerHTML = "%";
-
-      var newtd = document.createElement("td");
-      newtd.id = "prefix";
-      newtd.append(l2);
-      body.append(newtd);
+      var opt = document.createElement("option");
+      opt.innerHTML = "%";
+      this.d.append(opt);
     }
     this.d.id = "prefix";
     this.i.id = id;
@@ -85,6 +75,7 @@ class Field {
     this.l.innerHTML = name;
     if (readonly) {
       this.i.disabled = true;
+      this.l.className += " disabled";
       this.d.disabled = true;
     }
     mainbody.append(body);
