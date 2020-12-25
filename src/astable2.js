@@ -2,7 +2,7 @@ var Calculate = function (Fields) {
   var f = Convert(Fields[0]);
   var dc = Convert(Fields[1]);
   var c = Convert(Fields[2]);
-  var r2 = Convert(Field[4]);
+  var r2 = Convert(Fields[4]);
 
   if ((c != 0 || r2 != 0) && f == 0 && dc == 0) {
     //alert("pls fill all out");
