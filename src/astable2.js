@@ -8,7 +8,7 @@ var Calculate = function (Fields) {
     //alert("pls fill all out");
   } else {
     if (c != 0) {
-      r2 = (1 / f - dc / (100 * f)) / c / 0.693;
+      r2 = (1 / f - (1 / f) * (dc / 100)) / 0.693 / c;
       var r1 = (c / f) * 1.44 - 2 * r2;
       Fields[4].Set(r2);
       Fields[3].Set(r1);
@@ -39,6 +39,8 @@ buttonC.onclick = function () {
   Fields[2].ReadWrite();
   Fields[3].ReadOnly();
   Fields[4].ReadOnly();
+  Fields[4].Set(0);
+  Fields[3].Set(0);
 };
 var l1 = document.createElement("label");
 l1.innerHTML = "Capacitor";
@@ -51,6 +53,8 @@ buttonR2.onclick = function () {
   Fields[4].ReadWrite();
   Fields[2].ReadOnly();
   Fields[3].ReadOnly();
+  Fields[2].Set(0);
+  Fields[3].Set(0);
 };
 var l3 = document.createElement("label");
 l3.innerHTML = "Resistor 2";
