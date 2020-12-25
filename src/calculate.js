@@ -27,6 +27,7 @@ const Percent = {
 function f() {
   Calculate(Fields);
 }
+
 function Convert(a) {
   var n = a.Get();
   if (isNaN(Number(n)) || n == null) {
