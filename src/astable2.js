@@ -7,15 +7,15 @@ var Calculate = function (Fields) {
   if ((c != 0 || r2 != 0) && f == 0 && dc == 0) {
     //alert("pls fill all out");
   } else {
-    if (c != 0) {
+    if (c != 0 && !Field[2].i.disabled) {
       r2 = (1 / f - (1 / f) * (dc / 100)) / 0.693 / c;
       var r1 = 1.44 / f / c - 2 * r2;
       Fields[4].Set(r2);
       Fields[3].Set(r1);
     }
-    if (r2 != 0) {
+    if (r2 != 0 && !Field[4].i.disabled) {
       c = (1 / f - dc / (100 * f)) / r2 / 0.693;
-      var r1 = (c / f) * 1.44 - 2 * r2;
+      var r1 = 1.44 / f / c - 2 * r2;
 
       Fields[2].Set(c);
       Fields[3].Set(r1);
