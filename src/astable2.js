@@ -10,15 +10,15 @@ var Calculate = function (Fields) {
     if (c != 0) {
       r2 = (1 / f - dc / (100 * f)) / c / 0.693;
       var r1 = (c / f) * 1.44 - 2 * r2;
-      Field[4].Set(r2);
-      Field[3].Set(r1);
+      Fields[4].Set(r2);
+      Fields[3].Set(r1);
     }
     if (r2 != 0) {
       c = (1 / f - dc / (100 * f)) / r2 / 0.693;
       var r1 = (c / f) * 1.44 - 2 * r2;
 
-      Field[2].Set(c);
-      Field[3].Set(r1);
+      Fields[2].Set(c);
+      Fields[3].Set(r1);
     }
   }
 };
