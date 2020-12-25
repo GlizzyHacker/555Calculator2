@@ -9,7 +9,7 @@ var Calculate = function (Fields) {
   } else {
     if (c != 0) {
       r2 = (1 / f - (1 / f) * (dc / 100)) / 0.693 / c;
-      var r1 = (c / f) * 1.44 - 2 * r2;
+      var r1 = 1.44 / f / c - 2 * r2;
       Fields[4].Set(r2);
       Fields[3].Set(r1);
     }
