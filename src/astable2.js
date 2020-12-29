@@ -39,8 +39,6 @@ buttonC.onclick = function () {
   Fields[2].ReadWrite();
   Fields[3].ReadOnly();
   Fields[4].ReadOnly();
-  Fields[4].Set(0);
-  Fields[3].Set(0);
 };
 var l1 = document.createElement("label");
 l1.innerHTML = "Capacitor";
@@ -53,8 +51,6 @@ buttonR2.onclick = function () {
   Fields[4].ReadWrite();
   Fields[2].ReadOnly();
   Fields[3].ReadOnly();
-  Fields[2].Set(0);
-  Fields[3].Set(0);
 };
 var l3 = document.createElement("label");
 l3.innerHTML = "Resistor 2";
