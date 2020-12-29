@@ -115,9 +115,9 @@ class Field {
 
       this.d.selectedIndex = this.Prefixs.indexOf(this.prefix) - 1;
 
-      this.i.value = Math.round((val / this.prefix) * 100) / 100;
+      this.i.value = Math.round((val / this.prefix) * 1000) / 1000;
     } else {
-      this.i.value = Math.round(val * 100) / 100;
+      this.i.value = Math.round(val * 1000) / 1000;
     }
   }
 
