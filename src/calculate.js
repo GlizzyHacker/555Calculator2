@@ -56,6 +56,7 @@ class Field {
 
     this.i.className = "col-4 noborder";
     body.append(this.i);
+
     this.d.className = "col-4 noborder";
     body.append(this.d);
 
@@ -71,6 +72,7 @@ class Field {
 
       this.d.onchange = function () {
         GetField(id);
+        f();
       };
 
       this.d.selectedIndex = this.prefix - 1;
@@ -81,9 +83,7 @@ class Field {
     }
     this.d.id = "prefix";
     this.i.id = id;
-    this.i.oninput = function () {
-      f();
-    };
+    this.i.oninput = function () {};
     this.l.setAttribute("for", this.i.id);
     this.l.innerHTML = name;
     if (readonly) {
