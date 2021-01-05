@@ -72,7 +72,6 @@ class Field {
 
       this.d.onchange = function () {
         GetField(id);
-        f();
       };
 
       this.d.selectedIndex = this.prefix - 1;
@@ -83,7 +82,9 @@ class Field {
     }
     this.d.id = "prefix";
     this.i.id = id;
-    this.i.oninput = function () {};
+    this.i.onchange = function () {
+      f();
+    };
     this.l.setAttribute("for", this.i.id);
     this.l.innerHTML = name;
     if (readonly) {
