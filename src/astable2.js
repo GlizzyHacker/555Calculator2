@@ -4,7 +4,8 @@ var Calculate = function (Fields) {
   var c = Convert(Fields[2]);
   var r2 = Convert(Fields[4]);
 
-  Fields[1].Set(Math.max(Math.min(dc, 100), 50));
+  Fields[1].Set(Math.max(Math.min(dc, 100), 50.1));
+
   if ((c != 0 || r2 != 0) && f == 0 && dc == 0) {
     //alert("pls fill all out");
   } else {
